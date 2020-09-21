@@ -52,12 +52,12 @@ chr2	1	9015495	chr2	chr2	+	1	9015495
 chr3	1	8303104	chr4	chr4	+	1	8303104
 chr4	1	7834686	chr3	chr3	+	1	7834686
 </code></pre>
-1.Contig Id:Genome contig id;
-2.Contig Start:The start site of contig in the genome;
-3.Contig End:The end site of contig in the genome;
-4.Chrom Id:Chromosome id after genome mounting；
-5.Chrom Id:Chromosome id after genome mounting；
-6.Direction：The direction of contig in the chromosome；
-7.Chrom Start:The start site of Chrom in the genome;
-8.Chrom End:The end site of Chrom in the genome;
+1.Contig Id:Genome contig id;  
+2.Contig Start:The start site of contig in the genome;  
+3.Contig End:The end site of contig in the genome;  
+4.Chrom Id:Chromosome id after genome mounting;  
+5.Chrom Id:Chromosome id after genome mounting;  
+6.Direction：The direction of contig in the chromosome;  
+7.Chrom Start:The start site of Chrom in the genome;  
+8.Chrom End:The end site of Chrom in the genome.  
 
