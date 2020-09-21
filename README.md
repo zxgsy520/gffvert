@@ -1,6 +1,24 @@
 # gffvert
 Sort and convert coordinates of genome-annotated gff files.
 
+### Version: 1.1.0
+
+## Manuals
+<pre><code>
+wget -c https://github.com/zxgsy520/gffvert/archive/v1.1.0.tar.gz
+tar -zxvf v1.1.0.tar.gz
+cd v1.1.0
+chmod 755 *
+./stat_genome_gap.py -h
+</code></pre>
+or
+<pre><code>
+git clone https://github.com/zxgsy520/gffvert.git
+cd gffvert
+chmod 755 *
+./stat_genome_gap.py -h
+./convert_position_gff.py -h
+</code></pre>
 
 ### Using help
 <pre><code>
