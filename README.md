@@ -54,10 +54,31 @@ optional arguments:
   -h, --help         show this help message and exit
   -b STR, --bed STR  Input the bed file mounted by Hi-C.
 </code></pre> 
+<pre><code>
+usage: sort_gff.py [-h] [-l STR] gff
+
+name:
+        sort_gff.py -- Sort genome annotation result files
+attention:
+        sort_gff.py genome.gff >genome.new.gff
+version: v1.1.0
+contact:  Xingguo Zhang <113178210@qq.com>        
+
+positional arguments:
+  gff                   Input genome annotation gff file.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -l STR, --locustag STR
+                        Input the locustag of the gene.
+</code></pre> 
 ### Example
 <pre><code>
 python stat_genome_gap.py genome.fasta >stat.gap.txt
 python convert_position_gff.py genome.gff --bed hic.bed  >genome.new.gff
+python sort_gff.py genome.new.gff >genome.sort.gff
+or #To rename the gene, the prefix of the name is recommended to register the locus_tag on ncbi
+python sort_gff.py genome.new.gff --locustag NPG >genome.sort.gff
 </code></pre>
 ### File description
 <pre><code>
