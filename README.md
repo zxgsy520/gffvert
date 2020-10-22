@@ -10,6 +10,8 @@ tar -zxvf v1.1.0.tar.gz
 cd v1.1.0
 chmod 755 *
 ./stat_genome_gap.py -h
+./convert_position_gff.py -h
+./sort_gff -h
 </code></pre>
 or
 <pre><code>
@@ -18,6 +20,7 @@ cd gffvert
 chmod 755 *
 ./stat_genome_gap.py -h
 ./convert_position_gff.py -h
+./sort_gff -h
 </code></pre>
 
 ### Using help
@@ -76,9 +79,9 @@ optional arguments:
 <pre><code>
 python stat_genome_gap.py genome.fasta >stat.gap.txt
 python convert_position_gff.py genome.gff --bed hic.bed  >genome.new.gff
-python sort_gff.py genome.new.gff >genome.sort.gff
+psort_gff genome.new.gff >genome.sort.gff
 or #To rename the gene, the prefix of the name is recommended to register the locus_tag on ncbi
-python sort_gff.py genome.new.gff --locustag NPG >genome.sort.gff
+sort_gff genome.new.gff --locustag NPG >genome.sort.gff
 </code></pre>
 ### File description
 <pre><code>
