@@ -1,11 +1,11 @@
 # gffvert
 Sort and convert coordinates of genome-annotated gff files.
 
-### Version: 1.1.0
+### Version: 1.1.2
 
 ## Manuals
 <pre><code>
-wget -c https://github.com/zxgsy520/gffvert/archive/v1.1.0.tar.gz
+wget -c https://github.com/zxgsy520/gffvert/archive/v1.1.2.tar.gz
 tar -zxvf v1.1.0.tar.gz
 cd v1.1.0
 chmod 755 *
