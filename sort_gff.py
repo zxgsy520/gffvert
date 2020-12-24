@@ -11,7 +11,7 @@ import collections
 
 LOG = logging.getLogger(__name__)
 
-__version__ = "v1.1.0"
+__version__ = "v1.1.1"
 __author__ = ("Xingguo Zhang",)
 __email__ = "113178210@qq.com"
 __all__ = []
@@ -96,6 +96,8 @@ def update_gene_name(gene_line, old_name, locustag, number):
     if locustag!='':
         new_name = '%s_%05d' % (locustag, number)
         gene_line[-1] = gene_line[-1].replace(old_name, new_name)
+    else:
+        new_name = old_name
 
     return new_name, '\t'.join(gene_line)
     
