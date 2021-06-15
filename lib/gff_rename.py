@@ -11,7 +11,7 @@ from collections import OrderedDict
 
 LOG = logging.getLogger(__name__)
 
-__version__ = "v1.1.3"
+__version__ = "v1.1.4"
 __author__ = ("Xingguo Zhang",)
 __email__ = "invicoun@foxmail.com"
 __all__ = []
@@ -63,6 +63,8 @@ def gff_rename(file, prefix):
 
     r = []
     gn = 0
+    gi = ""
+
     for line in read_tsv(file, "\t"):
         if line[2] == "gene":
             if len(r) >= 2:
@@ -72,6 +74,8 @@ def gff_rename(file, prefix):
             gn += 1
             gi = "%s_%s_%s" % (prefix, line[0], gn)
         attr = split_attr(line[-1])
+        if not gi:
+            continue
         if "ID" in attr:
             attr["ID"] = gi
         if "Parent" in attr:
