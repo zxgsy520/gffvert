@@ -45,10 +45,10 @@ def split_attr(attributes):
     return r
 
 
-def get_id(attributes):
+def get_id(attributes, types="CDS"):
 
     gene_attr = split_attr(attributes)
-
+    
     if 'locus_tag' in gene_attr:
         gene_id = gene_attr['locus_tag']
     elif 'Parent' in gene_attr:
@@ -59,6 +59,9 @@ def get_id(attributes):
         gene_id = gene_attr['note'].replace(' ', '')
     else:
         raise Exception('Gene has no name.')
+
+    if ('ID' in gene_attr) and (types=='gene'):
+        gene_id = gene_attr['ID']
 
     return gene_id
 
@@ -71,9 +74,9 @@ def read_gff(file):
     n = 0
 
     for line in read_csv(file):
-        gene_id = get_id(line[-1])
+        gene_id = get_id(line[-1], line[2])
 
-        if line[2]=="exon":
+        if line[2]=="exon" or line[2]=="gap":
             continue
         if line[2]=="mRNA":
             mrna_dict[gene_id] = line
