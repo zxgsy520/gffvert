@@ -11,7 +11,7 @@ import collections
 
 LOG = logging.getLogger(__name__)
 
-__version__ = "v1.1.3"
+__version__ = "v1.1.4"
 __author__ = ("Xingguo Zhang",)
 __email__ = "113178210@qq.com"
 __all__ = []
@@ -49,12 +49,12 @@ def get_id(attributes, types="CDS"):
 
     gene_attr = split_attr(attributes)
     
-    if 'locus_tag' in gene_attr:
-        gene_id = gene_attr['locus_tag']
-    elif 'Parent' in gene_attr:
+    if 'Parent' in gene_attr:
         gene_id = gene_attr['Parent']
     elif 'ID' in gene_attr:
         gene_id = gene_attr['ID']
+    elif 'locus_tag' in gene_attr:
+        gene_id = gene_attr['locus_tag']
     elif 'note' in gene_attr:
         gene_id = gene_attr['note'].replace(' ', '')
     else:
