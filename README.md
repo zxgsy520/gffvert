@@ -7,7 +7,7 @@ Sort and convert coordinates of genome-annotated gff files.
 <pre><code>
 wget -c https://github.com/zxgsy520/gffvert/archive/v2.0.0.tar.gz
 tar -zxvf v2.0.0.tar.gz
-cd v1.1.4
+cd v2.0.0
 chmod 755 *
 ./stat_genome_gap.py -h
 ./convert_position_gff.py -h
