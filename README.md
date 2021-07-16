@@ -1,12 +1,12 @@
 # gffvert
 Sort and convert coordinates of genome-annotated gff files.
 
-### Version: 1.1.4
+### Version: 2.0.0
 
 ## Manuals
 <pre><code>
-wget -c https://github.com/zxgsy520/gffvert/archive/v1.1.4.tar.gz
-tar -zxvf v1.1.4.tar.gz
+wget -c https://github.com/zxgsy520/gffvert/archive/v2.0.0.tar.gz
+tar -zxvf v2.0.0.tar.gz
 cd v1.1.4
 chmod 755 *
 ./stat_genome_gap.py -h
@@ -63,9 +63,9 @@ usage: sort_gff.py [-h] [-l STR] gff
 name:
         sort_gff.py -- Sort genome annotation result files
 attention:
-        sort_gff.py genome.gff >genome.new.gff
-version: v1.1.0
-contact:  Xingguo Zhang <113178210@qq.com>        
+        sort_gff.py genome.gff >genome.new.gff 2>gene.name.tsv
+version: v2.0.0
+contact:  Xingguo Zhang <invicoun@foxmail.com>        
 
 positional arguments:
   gff                   Input genome annotation gff file.
