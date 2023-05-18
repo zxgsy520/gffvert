@@ -5,83 +5,40 @@ Sort and convert coordinates of genome-annotated gff files.
 
 ## Manuals
 <pre><code>
-wget -c https://github.com/zxgsy520/gffvert/archive/v2.0.0.tar.gz
-tar -zxvf v2.0.0.tar.gz
-cd v2.0.0
-chmod 755 *
-./stat_genome_gap.py -h
-./convert_position_gff.py -h
-./sort_gff -h
-</code></pre>
-or
-<pre><code>
-git clone https://github.com/zxgsy520/gffvert.git
-cd gffvert
-chmod 755 *
-./stat_genome_gap.py -h
-./convert_position_gff.py -h
-./sort_gff -h
+wget -c [https://github.com/zxgsy520/gffvert/archive/v2.0.0.tar.gz](https://github.com/zxgsy520/gffvert/releases/download/v1.1.5/gffvert)
+chmod 755 gffvert
 </code></pre>
 
 ### Using help
 <pre><code>
-usage: stat_genome_gap.py [-h] genome
+usage: gffvert [-h] {merge_repeat,stat_repeat,metaeuk2gff,gff2glimmer,gmst2gff,get_seq,cds2aa,gff2rmgene,sort_gff,change_coords} ...
 
 name:
-        stat_genome_gap -- Count the number of gaps in the assembled genome.
-attention:
-        stat_genome_gap genome.fasta >stat.gap.txt
-version: v1.1.0
-contact:  Xingguo Zhang <113178210@qq.com>        
+gffvert：Tools for processing gff files.
+URL：https://github.com/zxgsy520/gffvert
 
-positional arguments:
-  genome      Input genome file.
-
-optional arguments:
-  -h, --help  show this help message and exit
-</code></pre> 
-<pre><code>
-usage: convert_position_gff.py [-h] [-b STR] gff
-
-name:
-        convert_position_gff.py -- Transform gene coordinates
-attention:
-        convert_position_gff.py genome.gff --bed hic.bed  >genome.new.gff
-version: v1.1.0
-contact:  Xingguo Zhang <113178210@qq.com>        
-
-positional arguments:
-  gff                Input genome annotation gff file.
-
-optional arguments:
-  -h, --help         show this help message and exit
-  -b STR, --bed STR  Input the bed file mounted by Hi-C.
-</code></pre> 
-<pre><code>
-usage: sort_gff.py [-h] [-l STR] gff
-
-name:
-        sort_gff.py -- Sort genome annotation result files
-attention:
-        sort_gff.py genome.gff >genome.new.gff 2>gene.name.tsv
-version: v2.0.0
-contact:  Xingguo Zhang <invicoun@foxmail.com>        
-
-positional arguments:
-  gff                   Input genome annotation gff file.
+version: 1.1.1
+contact:  Xingguo Zhang,Shuying Deng <invicoun@foxmail.com>        
 
 optional arguments:
   -h, --help            show this help message and exit
-  -l STR, --locustag STR
-                        Input the locustag of the gene.
+
+command:
+  {merge_repeat,stat_repeat,metaeuk2gff,gff2glimmer,gmst2gff,get_seq,cds2aa,gff2rmgene,sort_gff,change_coords}
+    merge_repeat        Merge Repeating Sequence Comment Results
+    stat_repeat         Statistical repeat sequence
+    metaeuk2gff         Convert Metaeuk output files to standard gff file
+    gff2glimmer         Convert the gff file to the format of the GlimmerHMM training input file
+    gmst2gff            Mapping GeneMarkS-T predicted gff to genome.
+    get_seq             Extract specific types of sequences in gff files
+    cds2aa              Translate CDS into proteins.
+    gff2rmgene          Remove the gene specified in gff.
+    sort_gff            Sort and rename gff files.
+    change_coords       Convert coordinates to gff files(转坐标).
 </code></pre> 
 ### Example
 <pre><code>
-python stat_genome_gap.py genome.fasta >stat.gap.txt
-python convert_position_gff.py genome.gff --bed hic.bed  >genome.new.gff
-psort_gff genome.new.gff >genome.sort.gff
-or #To rename the gene, the prefix of the name is recommended to register the locus_tag on ncbi
-sort_gff genome.new.gff --locustag NPG >genome.sort.gff
+ gffvert change_coords genome.gff --bed hic.bed  >genome.new.gff
 </code></pre>
 ### File description
 <pre><code>
