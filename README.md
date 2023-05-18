@@ -5,7 +5,7 @@ Sort and convert coordinates of genome-annotated gff files.
 
 ## Manuals
 <pre><code>
-wget -c [https://github.com/zxgsy520/gffvert/archive/v2.0.0.tar.gz](https://github.com/zxgsy520/gffvert/releases/download/v1.1.5/gffvert)
+wget -c https://github.com/zxgsy520/gffvert/releases/download/v1.1.5/gffvert
 chmod 755 gffvert
 </code></pre>
 
