@@ -1,23 +1,25 @@
 # gffvert
 Sort and convert coordinates of genome-annotated gff files.
 
-### Version: 2.0.0
+### Version: 2.1.0
 
 ## Manuals
 <pre><code>
-wget -c https://github.com/zxgsy520/gffvert/releases/download/v1.1.5/gffvert
+wget -c https://github.com/zxgsy520/gffvert/releases/download/v2.1.0/gffvert
 chmod 755 gffvert
 </code></pre>
 
 ### Using help
 <pre><code>
-usage: gffvert [-h] {merge_repeat,stat_repeat,metaeuk2gff,gff2glimmer,gmst2gff,get_seq,cds2aa,gff2rmgene,sort_gff,change_coords} ...
+usage: gffvert [-h]
+               {merge_repeat,stat_repeat,genemark2gff,metaeuk2gff,glimmerhmm2gff3,gff2glimmer,gmst2gff,get_seq,cds2aa,gff2rmgene,gff2keep,sort_gff,change_coords,get_rrna,add_infor2gff,get_gene_info}
+               ...
 
 name:
 gffvert：Tools for processing gff files.
 URL：https://github.com/zxgsy520/gffvert
 
-version: 1.1.1
+version: 2.0.1
 contact:  Xingguo Zhang,Shuying Deng <invicoun@foxmail.com>        
 
 optional arguments:
@@ -27,14 +29,20 @@ command:
   {merge_repeat,stat_repeat,metaeuk2gff,gff2glimmer,gmst2gff,get_seq,cds2aa,gff2rmgene,sort_gff,change_coords}
     merge_repeat        Merge Repeating Sequence Comment Results
     stat_repeat         Statistical repeat sequence
+    genemark2gff        Convert genemark output files to standard gff file(合并和修改genemark输出的gff文件)
     metaeuk2gff         Convert Metaeuk output files to standard gff file
+    glimmerhmm2gff3     Convert GlimmerHMM output files to standard gff file(合并和修改GlimmerHMM输出的gff文件)
     gff2glimmer         Convert the gff file to the format of the GlimmerHMM training input file
     gmst2gff            Mapping GeneMarkS-T predicted gff to genome.
     get_seq             Extract specific types of sequences in gff files
     cds2aa              Translate CDS into proteins.
     gff2rmgene          Remove the gene specified in gff.
+    gff2keep            Keep the gene specified in gff.
     sort_gff            Sort and rename gff files.
     change_coords       Convert coordinates to gff files(转坐标).
+    get_rrna            Get rRNA sequence
+    add_infor2gff       Add annotation information to the gff file
+    get_gene_info       Obtain information corresponding to genes
 </code></pre> 
 ### Example
 <pre><code>
