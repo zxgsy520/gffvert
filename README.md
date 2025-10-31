@@ -45,7 +45,7 @@ command:
     get_gene_info       Obtain information corresponding to genes
 </code></pre> 
 ### Example
-#### GFF file coordinate conversion（坐标转换）
+#### （1）GFF file coordinate conversion（坐标转换）
 <pre><code>
  gffvert change_coords genome.gff --bed hic.bed  >genome.new.gff
 </code></pre>
@@ -69,3 +69,7 @@ chr4	1	7834686	chr3	chr3	+	1	7834686
 7.Chrom Start:The start site of Chrom in the genome;  
 8.Chrom End:The end site of Chrom in the genome.  
 
+#### （2）对gff文件进行格式转换，方便上传国家数据
+```
+ gffvert sort_gff genome.gff >genome.new.gff
+```
