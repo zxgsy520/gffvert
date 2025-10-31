@@ -45,10 +45,11 @@ command:
     get_gene_info       Obtain information corresponding to genes
 </code></pre> 
 ### Example
+#### GFF file coordinate conversion（坐标转换）
 <pre><code>
  gffvert change_coords genome.gff --bed hic.bed  >genome.new.gff
 </code></pre>
-### File description
+hic.bed format
 <pre><code>
 chr1	1	256609	chr1	chr1	-	12195126	11938518
 chr1	256710	3288985	chr1	chr1	+	8906142	11938417
